@@ -1,7 +1,7 @@
 silos:
   users:
-    host: 'videoplayzer-silo-user.herokuapp.com'
+    host: 'videoplayzer-user.herokuapp.com'
     endpoint: '/api/users'
   videos:
-    host: 'videoplayzer-silo-video.herokuapp.com'
+    host: 'videoplayzer-video.herokuapp.com'
     endpoint: '/api/videos'
