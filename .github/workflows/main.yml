@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-ruby@v1
     - name: Start deploy
       run: |  
+        gem install dpl
         cd $PILOTE_PATH
         dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY --skip_cleanup
 
