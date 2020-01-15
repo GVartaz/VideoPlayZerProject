@@ -1,0 +1,76 @@
+#entete{
+    background-image:url(../img/background_log.jpg);
+    background-repeat: no-repeat;
+
+}
+
+#entete a{
+    text-decoration: none;
+    color: black;
+}
+
+center{
+    padding: 25px;
+}
+
+#login-form{
+    border-style: groove;
+    border-width: 5px;
+    border-color: rgb(36, 202, 188);
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2%;
+}
+
+#login-form h3{
+    padding: 15px;
+    text-align:center;
+
+
+}
+
+#visitor-div button{
+    width: 25%;
+}
+
+#visitor-div a{
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+#loginForm{
+    padding: 15px;
+    text-align:center;
+}
+
+#sign{
+    margin-top: 15px;
+}
+
+#no_account{
+    padding:15px;
+    
+}
+#ad{
+    margin-top: 5%;
+}
+
+body{
+    background-color: #e6e4fa !important;
+}
+
+p#footer
+{
+    
+    width: 100%;
+    background: rgba(32, 144, 196, 0.8) ;
+    margin: 150px 0 0 0;
+    bottom:0;
+    left:0;
+    font-size: 1.2em ;
+    color: #ffffff ;
+    text-align: center ;
+    position: fixed;
+}

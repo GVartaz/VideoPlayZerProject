@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr" ng-app="demoApp">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="icon.ico" />
+        <title>VideoPlayzer</title>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/main.js"></script>
+        <link href="./css/play.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-controller="PlayController">
+        <div id="entete">
+            <button ng-if="user._id" id="logout" class="btn btn-secondary" ng-click="logout()"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Déconnexion</button>
+            <button ng-if="!user._id" id="logout" class="btn btn-success" ng-click="login()">Connexion</button>
+            <center><h1><a href="search.html"><img src="./img/logo.png" alt="Logo Todo">VideoPlayzer</a></h1></center>
+        </div>
+        <div id="contenu">
+            <button id="back" class="btn btn-primary" onClick="self.location.href='search.html'"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Recherche de vidéos</button>
+        </div>
+        <br/> 
+        <div id="videoPlay">
+            <center>
+                <iframe width="820" height="500" ng-src="{{trustSrc(video.embedurl)}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="title"><b>{{video.title}}</b></p>
+                <p id="infos">
+                    <i>par <b>{{video.channel}}</b></i> - {{video.publishedAt}}
+                    <img width="200px" height="120px" src="img/{{video.brand}}.png">
+                </p>
+                <button class="btn btn-success" ng-if="user._id" id="addfav{{video.id}}" ng-click="addFav(video.id,video.brand)"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Ajouter aux favoris</button>
+                <p id="fav{{video.id}}" ng-if="user._id"></p>
+                <p id="desc"><b>Description </b>:{{video.description}}</p>
+            </center>
+        </div>
+        
+        <p id="footer">
+            <i>
+                Projet Urbanisation et Gouvernance des SI - Polytech Marseille
+                <br>
+                Copyright © Geoffrey VARTAZIAN Thomas MARTINEZ 2019
+            </i>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,260 @@
+#entete{
+    background-image:url(../img/background_log.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+}
+
+#entete a{
+    text-decoration: none;
+    color:black;
+}
+
+center{
+    padding: 25px;
+}
+
+body{
+    background-color: #d4d1d1 !important;
+}
+
+#contenu{
+    padding: 3%;
+    padding-bottom: 10%;
+}
+
+#searchBtn{
+    margin-bottom: 25px;
+}
+
+center h1 img{
+    padding-right: 10px;
+    width: 100px;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px !important;
+    padding-right: 0px !important;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+#searchIn{
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(122, 122, 218);
+    border-radius: 5px;
+    width: 40%;
+    height: 30px;
+}
+
+#infos b{
+    margin-bottom: 15px;
+}
+
+#favorites{
+    display: inline-block;
+    text-align: center;
+    border-spacing:25px 50px;
+    border: 1px solid rgba(32, 144, 196, 0.8);
+    border-radius: 13px; 
+    background-color: whitesmoke;
+}
+
+#favorites td, 
+#favorites th { 
+    border-bottom: 1px solid rgba(32, 144, 196, 0.8);
+    padding: 25px; 
+}
+#favorites tr:last-child > td {
+    border-bottom: none;
+}
+
+#videos{
+    display: inline-block;
+    margin: 5%;
+    text-align: center;
+    border-spacing:25px 50px;
+    border: 1px solid rgba(32, 144, 196, 0.8);
+    border-radius: 13px; 
+    background-color: whitesmoke;
+}
+
+#videos td, 
+#videos th { 
+    border-bottom: 1px solid rgba(32, 144, 196, 0.8);
+    padding: 25px; 
+}
+#videos tr:last-child > td {
+    border-bottom: none;
+}
+
+#favorites select{
+    max-height: 8em;
+}
+#favorites option{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2em;
+}
+
+#selectPlaylist select{
+    width: auto;
+    margin-bottom: 25px;
+}
+
+#liste{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(122, 122, 218);
+    border-radius: 5px;
+}
+
+#liste h4{
+    display: inline;
+    padding: 2%;
+}
+
+#del-liste{
+    float: left;
+}
+
+#modifTask{
+    float: right;
+}
+
+#delTask{
+    margin-left: 25px;
+}
+
+#nomListe{
+    background-color: rgb(122, 122, 218);
+    padding: 2%;
+}
+
+
+#list-form{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#list-form button{
+    margin-right: 15px;
+}
+
+#search-form{
+    padding-top: 2%;
+}
+
+#search-form button{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#todo-form{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#task h5{
+    padding: 2%;
+}
+
+#logout{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#content{
+    display: inline;
+}
+
+#cb{
+    display: inline;
+}
+
+#select-warning{
+    color: red;
+}
+
+#liste-warning{
+    color: red;
+}
+
+p#footer
+{
+    
+    width: 100%;
+    background: rgba(32, 144, 196, 0.8) ;
+    margin: 150px 0 0 0;
+    bottom:0;
+    left:0;
+    font-size: 1.2em ;
+    color: #ffffff ;
+    text-align: center ;
+    position: fixed;
+}

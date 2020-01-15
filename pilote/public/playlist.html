@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr" ng-app="demoApp">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="icon.ico" />
+        <title>VideoPlayzer</title>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/main.js"></script>
+        <link href="./css/playlist.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-controller="PlaylistController">
+        <div id="entete">
+            <button id="logout" class="btn btn-secondary" ng-click="logout()"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Déconnexion</button>
+            <center><h1><a href="search.html"><img src="./img/logo.png" alt="Logo Todo">VideoPlayzer</a></h1></center>
+        </div>
+        <br/> 
+        <div id="contenu">
+            <button id="back" ng-if="user._id" class="btn btn-primary" onClick="self.location.href='search.html'"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Recherche de vidéos</button>
+            <form>
+                <h5>Nouvelle Playlist : </h5>
+                <input type="text" required="" id="newListe" placeholder=" Nom de la playlist" ng-model="formListe.name">
+                <button type="submit" class="btn btn-success" ng-click="createPlaylist()">Créer</button>
+                <p id="liste-warning"></p>
+            </form>
+        </div>
+        <table id="playlists">
+            <tr ng-repeat="x in playlistSet">
+                <td id="open">
+                    <button class="playlist-btn" id="playlist{{x._id}}" ng-click="openPlaylist(x._id)"><h2>{{x.name}}</h2></button id="playlist{{x._id}}">
+                </td>
+                <td>
+                    <button id="del-liste" class="btn btn-danger" ng-click="deletePlaylist(x._id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                </td>
+            </tr>
+        </table>
+        <center>
+            <table id="videoPlaylist" style="display: none;">
+                <tr ng-if="videoSet.length">
+                    <td>
+
+                    </td>
+                    <td>
+                        <h2>Titre</h2>
+                    </td>
+                    <td>
+                        <h2>Auteur</h2>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr id="vide" style="display: none;"><td>
+                <h3>Cette playlist est vide</h3>
+                </td></tr>
+                <tr ng-repeat="v in videoSet">
+                    <td>
+                        <img ng-click="open(v.id,v.brand)" width="{{v.miniatureWidth}}" height="{{v.miniatureHeight}}" ng-src="{{v.miniatureUrl}}">
+                    </td>
+                    <td>
+                        <a ng-click="open(v.id,v.brand)"><h5>{{v.title}}</h5></a>
+                    </td>
+                    <td>
+                        <i>{{v.channel}}</i>
+                    </td>
+                    <td>
+                        <button id="del-liste" class="btn btn-danger" ng-click="deleteFromPlaylist(v._id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <p id="footer">
+            <i>
+                Projet Urbanisation et Gouvernance des SI - Polytech Marseille
+                <br>
+                Copyright © Geoffrey VARTAZIAN Thomas MARTINEZ 2019
+            </i>
+        </p>
+    </body>
+</html>

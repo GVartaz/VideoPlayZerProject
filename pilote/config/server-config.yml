@@ -1,0 +1,10 @@
+# server information
+server:
+  host: 'localhost'
+  port: 8080
+  api: 'api'
+  public:
+    root: 'public'
+    imgs: 'public/img'
+    css: 'public/css'
+    js: 'public/js'

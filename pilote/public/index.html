@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr" ng-app="demoApp">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="icon.ico" />
+        <title>VideoPlayzer</title>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/main.js"></script>
+        <link href="./css/login.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-controller="LoginController">
+            <div id="entete">
+                <center><h1><img src="./img/logo.png" alt="Logo Todo" width="5%" height="5%">Video Playzer</h1></center>
+            </div>
+        <br/> 
+        <center>
+
+            <div id ="visitor-div">
+               <b><center> <h2> Just Want to Search new videos?</h2></b>
+                <button ng-click="guestSearch()" class="btn btn-primary" >Go</button>
+            </center>
+
+            </div>
+            <div id="login-form">
+                <h3>Log In</h3>
+                <form id="loginForm">
+                    <p>
+                        <input placeholder="Email Adresse" type="text" id="login" required style="margin-bottom: 10px;" ng-model="formLogin.login">
+                    </p>
+                    <p>
+                        <input placeholder="Password" required type="password" id="password" style="margin-bottom: 10px;" ng-model="formLogin.pwd">
+                    </p>
+                    <button type="submit" class="btn btn-success" ng-click="connexion()">Connexion</button>
+                </form>
+            </div>
+        <div id="no_account">
+            <b><h4>Don't have an account?</h4></b>
+            <u><a href="inscription.html">Create one here to save your favorite videos!</a></u>
+
+        </div>
+    </center>
+        <p id="footer">
+            <i>
+                Projet Urbanisation et Gouvernance des SI - Polytech Marseille
+                <br>
+                Copyright © Geoffrey VARTAZIAN Thomas MARTINEZ 2019
+            </i>
+        </p>
+    </body>
+</html>

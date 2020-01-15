@@ -1,0 +1,4 @@
+files:
+  - main.js
+  - app.config.js
+  - angular.min.js

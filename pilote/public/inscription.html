@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr" ng-app="demoApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Video Playzer</title>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/main.js"></script>
+        <link href="./css/login.css" rel="stylesheet" type="text/css"> <!-- sign.css de base -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body ng-controller="InscriptionController">
+        <div id="entete">
+            <center><h1><a href="search.html"><img src="./img/logo.png" alt="Logo Todo" width="5%" height="5%">Video Playzer</a></h1></center>
+        </div>
+        <center> 
+            <div id="login-form">
+                <b><h3>Welcome to the future of videos' hub</h3>
+                </b>
+                <form id="loginForm">
+                     <p>
+                        <input required type="text" id="firstname" required style="margin-bottom: 10px;" placeholder="First name" ng-model="formLogin.firstname">
+                    </p>
+                    <p>
+                        <input required type="text" id="lastname" required style="margin-bottom: 10px;" placeholder="Last name" ng-model="formLogin.lastname">
+                    </p>
+                    <p>
+                        <input required type="text" id="adresse" required style="margin-bottom: 10px;" placeholder="Email Adresse" ng-model="formLogin.login">
+                    </p>
+                    <p>
+                        <input required id="password" type="password" style="margin-bottom: 10px;" placeholder="Password" ng-model="formLogin.pwd">
+                    </p>
+                    <p>
+                        <input required type="password" id="confirmed_password" required style="margin-bottom: 10px;" placeholder="Confirm password" ng-model="formLogin.confirmPwd">
+                    </p>
+                    <p>
+                        <input type="checkbox" id="agreement" name="agreement">
+                        <label for="agreement">I agree to the general terms</label>
+                    </p>
+                    <button type="submit" class="btn btn-success" ng-click="createUser()">Register</button>
+                </form>
+            </div>
+        </center>
+        <p id="footer">
+            <i>
+                Projet Urbanisation et Gouvernance des SI - Polytech Marseille
+                 <br>
+                 Copyright © Geoffrey VARTAZIAN Thomas MARTINEZ 2019
+            </i>
+        </p>
+    </body>
+</html>

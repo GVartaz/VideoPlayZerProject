@@ -1,0 +1,178 @@
+#entete{
+    background-image:url(../img/background_log.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+
+}
+
+#entete a{
+    text-decoration: none;
+    color:black;
+}
+
+#entete h1{
+    margin: 0;
+}
+
+center{
+    padding: 25px;
+}
+
+body{
+    background-color: #d4d1d1 !important;
+}
+
+#home span{
+    font-size: 400%;
+    padding-top: 50px;
+    padding-left: 50px;
+    color: black !important;
+}
+
+#contenu{
+    padding: 3%;
+}
+
+center h1 img{
+    padding-right: 10px;
+    width: 100px;
+}
+
+#videoPlay{
+    margin-bottom: 5%;
+}
+
+#title{
+    width: 60%;
+    font-size: 200%;
+}
+
+#searchIn{
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(122, 122, 218);
+    border-radius: 5px;
+    width: 40%;
+    height: 30px;
+}
+
+#favorites infos{
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#favorites select{
+    max-height: 8em;
+}
+#favorites option{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2em;
+}
+
+table tr{
+    padding-bottom: 3%;
+}
+
+#infos{
+    font-size: 150%;
+    padding: 0% 5%;
+}
+
+#desc {
+    text-align: left;
+    margin-top: 20px;
+    padding: 0% 25%;
+}
+
+#liste{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(122, 122, 218);
+    border-radius: 5px;
+}
+
+#liste h4{
+    display: inline;
+    padding: 2%;
+}
+
+#del-liste{
+    float: left;
+}
+
+#modifTask{
+    float: right;
+}
+
+#delTask{
+    margin-left: 25px;
+}
+
+#nomListe{
+    background-color: rgb(122, 122, 218);
+    padding: 2%;
+}
+
+#list-form h5{
+    display: inline;
+}
+
+
+#list-form{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#list-form button{
+    margin-left: 1%;
+}
+
+#todo-form{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#task h5{
+    padding: 2%;
+}
+
+#logout{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#content{
+    display: inline;
+}
+
+#cb{
+    display: inline;
+}
+
+#select-warning{
+    color: red;
+}
+
+#liste-warning{
+    color: red;
+}
+
+p#footer
+{
+    
+    width: 100%;
+    background: rgba(32, 144, 196, 0.8) ;
+    margin: 150px 0 0 0;
+    bottom:0;
+    left:0;
+    font-size: 1.2em ;
+    color: #ffffff ;
+    text-align: center ;
+    position: fixed;
+}

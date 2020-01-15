@@ -1,0 +1,43 @@
+#entete{
+    background-image:url(../img/background_log.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+}
+
+center{
+    padding: 25px;
+}
+
+#login-form{
+    border-style: groove;
+    border-width: 5px;
+    border-color: rgb(35, 170, 35);
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2%;
+}
+
+#login-form h3{
+    padding: 15px;
+}
+
+#loginForm{
+    padding: 15px;
+}
+
+body{
+    background-color: #d4d1d1 !important;
+}
+
+p#footer
+{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: rgba(153, 221, 252, 0.8) ;
+    margin: 100px 0 0 0;
+    font-size: 1.2em ;
+    color: #000000 ;
+    text-align: center ;
+}

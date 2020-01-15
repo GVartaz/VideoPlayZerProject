@@ -1,0 +1,9 @@
+silos:
+  users:
+    host: 'localhost'
+    port: 8081
+    endpoint: '/api/users'
+  videos:
+    host: 'localhost'
+    port: 8082
+    endpoint: '/api/videos'
