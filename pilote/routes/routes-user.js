@@ -7,7 +7,7 @@ const { silosConfig } = require('../config/config');
 const usersSilos = silosConfig.silos.users;
 
 router.post("/connexion",function(req,response){
-    axios.post('https://' + usersSilos.host + ':' + usersSilos.port + usersSilos.endpoint + "/connexion", {
+    axios.post('https://' + usersSilos.host + usersSilos.endpoint + "/connexion", {
         login : req.body.login,
         pwd : req.body.pwd
     }).then(function(res){
@@ -20,7 +20,7 @@ router.post("/connexion",function(req,response){
 })
 
 router.post("/logout",function(req,response){
-    axios.post('https://' + usersSilos.host + ':' + usersSilos.port + usersSilos.endpoint + "/logout")
+    axios.post('https://' + usersSilos.host + usersSilos.endpoint + "/logout")
     .then(function(res){
         req.session.destroy();
         response.status(200).json(true);
@@ -37,7 +37,7 @@ router.post("/addUser",function(req,response){
         login : req.body.login,
         pwd : req.body.pwd
     };
-    axios.post('https://' + usersSilos.host + ':' + usersSilos.port + usersSilos.endpoint + "/addUser", {
+    axios.post('https://' + usersSilos.host + usersSilos.endpoint + "/addUser", {
         firstname: user.firstname,
         lastname: user.lastname,
         login : user.login,

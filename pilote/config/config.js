@@ -18,8 +18,6 @@ try {
 		console.log("server on heroku");
 		serverConfig.deploy = "heroku";
 		serverConfig.server.port = process.env.PORT;
-		silosConfig.silos.users.port = process.env.PORT;
-		silosConfig.silos.videos.port = process.env.PORT;
 	} else {
 		console.log("server on local");
 		serverConfig.deploy = "local";

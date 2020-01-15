@@ -1,9 +1,7 @@
 silos:
   users:
     host: 'videoplayzer-user.herokuapp.com'
-    port: 80
     endpoint: '/api/users'
   videos:
     host: 'videoplayzer-video.herokuapp.com'
-    port: 80
     endpoint: '/api/videos'
