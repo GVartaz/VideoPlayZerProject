@@ -1,0 +1,31 @@
+on: [push]
+env:
+    SILO_USERS_PATH: users/
+    SILO_VIDEO_PATH: videos/
+    PILOTE_PATH: pilote/
+    HEROKU_APP_USERS: ${{secrets.HEROKU_APP_NAME}}-user
+    HEROKU_APP_VIDEO: ${{secrets.HEROKU_APP_NAME}}-video
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: VideoPlayzer Heroku
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.3
+    - name: Start deploy
+      run: |  
+        gem install dpl
+        cd $PILOTE_PATH
+        dpl --provider=heroku --app=${{secrets.HEROKU_APP_NAME}} --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup
+        cd ../silos/$SILO_VIDEO_PATH
+        dpl --provider=heroku --app=$HEROKU_APP_VIDEO --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup
+        cd ../$SILO_USERS_PATH
+        dpl --provider=heroku --app=$HEROKU_APP_USERS --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup
+
+
+
