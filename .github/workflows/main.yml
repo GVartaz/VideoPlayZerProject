@@ -24,7 +24,7 @@ jobs:
         dpl --provider=heroku --app=${{secrets.HEROKU_APP_NAME}} --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup
         cd ../silos/$SILO_VIDEO_PATH
         dpl --provider=heroku --app=$HEROKU_APP_VIDEO --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup
-        cd ../silos/$SILO_USERS_PATH
+        cd ../$SILO_USERS_PATH
         dpl --provider=heroku --app=$HEROKU_APP_USERS --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup
 
 
