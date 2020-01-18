@@ -1,7 +1,7 @@
 on: [push]
 env:
-    SILO_USERS_PATH: users/
-    SILO_VIDEO_PATH: videos/
+    SILO_USERS_PATH: silos/users/
+    SILO_VIDEO_PATH: silos/videos/
     PILOTE_PATH: pilote/
     HEROKU_APP_USERS: ${{secrets.HEROKU_APP_NAME}}-user
     HEROKU_APP_VIDEO: ${{secrets.HEROKU_APP_NAME}}-video
