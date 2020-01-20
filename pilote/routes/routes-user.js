@@ -5,6 +5,7 @@ var router = express.Router();
 
 const { silosConfig } = require('../config/config');
 const usersSilos = silosConfig.silos.users;
+const config = require(`${process.cwd()}/config/config`);
 
 router.post("/connexion",function(req,response){
     axios.post(makeFullEndpoint(usersSilos) + "/connexion", {
