@@ -41,8 +41,11 @@
             <p id="warning"></p>
             <div id="divFavorites" ng-if="user._id">
                 <table id="favorites">
-                    <h3 id="labelFav">
+                    <h3 ng-if="favoriteSet.length>0" id="labelFav">
                         Mes favoris :
+                    </h3>
+                    <h3 ng-if="favoriteSet.length==0" id="labelFav">
+                        Vous n'avez pas de favoris
                     </h3>
                     <tr ng-repeat="x in favoriteSet">
                         <td>

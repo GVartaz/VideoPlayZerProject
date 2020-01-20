@@ -27,15 +27,16 @@ class Server {
 
   start(host, port) {
     this.server.set('port', process.env.PORT || port);
+    
+      dataLayerVideo.init(function(){
+        console.log("Connected to db");
+      });
       //HEROKU COND
       if (config.serverConfig.deploy === "heroku") {
           this.server.listen(port, () => {
               console.log(`Listening on '${host}' on the port ${port}...`);
           })
       } else {
-        dataLayerVideo.init(function(){
-          console.log("Connected to db");
-        });
         http.createServer(this.server).listen(this.server.get('port'), host, function() {
             console.log(`Listening on '${host}' on the port ${port}...`);
         });
