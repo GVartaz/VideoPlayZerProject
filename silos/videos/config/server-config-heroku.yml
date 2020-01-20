@@ -1,4 +1,4 @@
 # server information
 server:
   host: 'videoplayzer-video.herokuapp.com'
-  port: 8080
+  port: 80
