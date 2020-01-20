@@ -29,6 +29,10 @@ body{
     padding: 3%;
 }
 
+#link{
+    cursor: pointer;
+}
+
 #back{
     margin-bottom: 25px;
 }

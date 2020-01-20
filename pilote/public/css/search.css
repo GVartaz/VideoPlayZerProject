@@ -159,6 +159,10 @@ center h1 img{
     height: 2em;
 }
 
+#link{
+    cursor: pointer;
+}
+
 #selectPlaylist select{
     width: auto;
     margin-bottom: 25px;

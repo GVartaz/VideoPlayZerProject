@@ -4,7 +4,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 
 var db;
 
-var dataLayerUser = {
+var dataLayerVideo = {
     init : function(cb){
 
         client.connect(function(err){
@@ -147,4 +147,4 @@ var dataLayerUser = {
 }
 
 
-module.exports = dataLayerUser;
+module.exports = dataLayerVideo;
