@@ -10,7 +10,7 @@ var dataLayerUser = {
         client.connect(function(err){
             if(err) throw err;
 
-            db = client.db("dbGV");
+            db = client.db("dbGVUsers");
             cb();
         });
 
