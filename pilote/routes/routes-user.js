@@ -4,7 +4,6 @@ const express = require('express'),
 var router = express.Router();
 
 const { silosConfig } = require('../config/config');
-const config = require(`${process.cwd()}/config/config`);
 const usersSilos = silosConfig.silos.users;
 
 router.post("/connexion",function(req,response){
@@ -54,12 +53,12 @@ router.post("/addUser",function(req,response){
 function makeFullEndpoint(silo) {
     let fullEndpoint;
     //HEROKU COND
-    if (config.serverConfig.deploy === "heroku") {
+    /*if (config.serverConfig.deploy === "heroku") {
         fullEndpoint = `http://${silo.host}${silo.endpoint}`;
     }
-    else {
+    else {*/
         fullEndpoint = `http://${silo.host}:${silo.port}${silo.endpoint}`;
-    }
+    //}
 
     return fullEndpoint;
 }
