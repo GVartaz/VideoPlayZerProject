@@ -72,6 +72,7 @@ class Server {
 	start(host, port) {
 
 		const options = {};
+		this.server.set('port', process.env.PORT || port);
 
 		//HEROKU COND
 		 if (config.serverConfig.deploy === "heroku") {
@@ -79,7 +80,6 @@ class Server {
 				console.log(`Listening on '${host}' on the port ${port}...`);
 			});
 		 } else {
-			this.server.set('port', process.env.PORT || port);
 			http.createServer(this.server).listen(this.server.get('port'), host, function() {
 				console.log(`Listening on '${host}' on the port ${port}...`);
 			});
