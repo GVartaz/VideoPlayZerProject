@@ -58,10 +58,10 @@
                 </td></tr>
                 <tr ng-repeat="v in videoSet">
                     <td>
-                        <img ng-click="open(v.id,v.brand)" width="{{v.miniatureWidth}}" height="{{v.miniatureHeight}}" ng-src="{{v.miniatureUrl}}">
+                        <img id="link" ng-click="open(v.id,v.brand)" width="{{v.miniatureWidth}}" height="{{v.miniatureHeight}}" ng-src="{{v.miniatureUrl}}">
                     </td>
                     <td>
-                        <a ng-click="open(v.id,v.brand)"><h5>{{v.title}}</h5></a>
+                        <a ng-click="open(v.id,v.brand)"><h5 id="link">{{v.title}}</h5></a>
                     </td>
                     <td>
                         <i>{{v.channel}}</i>

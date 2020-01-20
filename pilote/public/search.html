@@ -46,10 +46,10 @@
                     </h3>
                     <tr ng-repeat="x in favoriteSet">
                         <td>
-                            <img ng-click="open(x.id,x.brand)" width="{{x.miniatureWidth}}" height="{{x.miniatureHeight}}" ng-src="{{x.miniatureUrl}}">
+                            <img id="link" ng-click="open(x.id,x.brand)" width="{{x.miniatureWidth}}" height="{{x.miniatureHeight}}" ng-src="{{x.miniatureUrl}}">
                         </td>
                         <td id="infos">
-                            <a ng-click="open(x.id,x.brand)"><b>{{x.title}}</b></a>
+                            <a ng-click="open(x.id,x.brand)"><b id="link">{{x.title}}</b></a>
                             <br>
                             <i>par <b>{{x.channel}}</b></i> - {{x.publishedAt}}
                             <br>
@@ -76,10 +76,10 @@
             <table id="videos">
                 <tr ng-repeat="x in videoSet">
                     <td>
-                        <img ng-click="open(x.id,x.brand)"  width="{{x.miniatureWidth}}" height="{{x.miniatureHeight}}" ng-src="{{x.miniatureUrl}}">
+                        <img ng-click="open(x.id,x.brand)" id="link" width="{{x.miniatureWidth}}" height="{{x.miniatureHeight}}" ng-src="{{x.miniatureUrl}}">
                     </td>
                     <td id="infos">
-                        <a ng-click="open(x.id,x.brand)"><b>{{x.title}}</b></a>
+                        <a ng-click="open(x.id,x.brand)"><b id="link">{{x.title}}</b></a>
                         <br>
                         <button id="addfav{{x.id}}" class="btn btn-success" ng-if="user._id" ng-click="addFav(x.id,x.brand)"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Ajouter aux favoris</button>
                         <p id="fav{{x.id}}" ng-if="user._id"></p>

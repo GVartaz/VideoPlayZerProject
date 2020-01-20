@@ -105,6 +105,7 @@ demoApp.controller('SearchController',function($scope,$http){
             $http.post('/api/videos/search/'+site,$scope.formVideo).then(function(resp){
                 console.log(resp.data);
                 $scope.videoSet = resp.data.videos.results;
+                document.getElementById("link").style.cursor = "pointer";
                 if(resp.data.videos.results.length == 0){
                     document.getElementById("results-warning").innerHTML = "Aucun résultat trouvé. Essayez avec d'autres mots-clés";
                 } else {
@@ -140,6 +141,7 @@ demoApp.controller('SearchController',function($scope,$http){
                 $scope.user = resp.data.user;
                 $scope.favoriteSet = resp.data.videos;
                 $scope.playlistSet = resp.data.playlists;
+                document.getElementById("link").style.cursor = "pointer";
             } else {
                 document.getElementById("warning").innerHTML = "En tant qu'invité, vous ne pourrez pas sauvegarder "+
                 "de vidéos dans vos favoris. Connectez vous ou inscrivez vous pour profiter de cette fonctionnalité";
@@ -277,6 +279,7 @@ demoApp.controller('PlaylistController',function ($scope, $http){
                 document.getElementById("vide").style.display = "none";
             }
             $scope.videoSet = resp.data;
+            document.getElementById("link").style.cursor = "pointer";
         })
     }
 
