@@ -4,10 +4,11 @@ const express = require('express'),
 var router = express.Router();
 
 const { silosConfig } = require('../config/config');
+const config = require(`${process.cwd()}/config/config`);
 const usersSilos = silosConfig.silos.users;
 
 router.post("/connexion",function(req,response){
-    axios.post('http://' + usersSilos.host + usersSilos.endpoint + "/connexion", {
+    axios.post(makeFullEndpoint(usersSilos) + "/connexion", {
         login : req.body.login,
         pwd : req.body.pwd
     }).then(function(res){
@@ -20,7 +21,7 @@ router.post("/connexion",function(req,response){
 })
 
 router.post("/logout",function(req,response){
-    axios.post('http://' + usersSilos.host + usersSilos.endpoint + "/logout")
+    axios.post(makeFullEndpoint(usersSilos) + "/logout")
     .then(function(res){
         req.session.destroy();
         response.status(200).json(true);
@@ -37,7 +38,7 @@ router.post("/addUser",function(req,response){
         login : req.body.login,
         pwd : req.body.pwd
     };
-    axios.post('http://' + usersSilos.host + usersSilos.endpoint + "/addUser", {
+    axios.post(makeFullEndpoint(usersSilos) + "/addUser", {
         firstname: user.firstname,
         lastname: user.lastname,
         login : user.login,
@@ -49,5 +50,18 @@ router.post("/addUser",function(req,response){
     });
     
 })
+
+function makeFullEndpoint(silo) {
+    let fullEndpoint;
+    //HEROKU COND
+    if (config.serverConfig.deploy === "heroku") {
+        fullEndpoint = `http://${silo.host}${silo.endpoint}`;
+    }
+    else {
+        fullEndpoint = `http://${silo.host}:${silo.port}${silo.endpoint}`;
+    }
+
+    return fullEndpoint;
+}
 
 module.exports = router;

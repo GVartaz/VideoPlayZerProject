@@ -28,12 +28,12 @@ class Server {
 
   start(host, port) {
       //HEROKU COND
+      this.server.set('port', process.env.PORT || port);
       if (config.serverConfig.deploy === "heroku") {
           this.server.listen(port, () => {
               console.log(`Listening on '${host}' on the port ${port}...`);
           })
       } else {
-        this.server.set('port', process.env.PORT || port);
         dataLayerUser.init(function(){
           console.log("Connected to db");
         });
