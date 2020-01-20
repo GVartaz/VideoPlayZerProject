@@ -53,12 +53,12 @@ router.post("/addUser",function(req,response){
 function makeFullEndpoint(silo) {
     let fullEndpoint;
     //HEROKU COND
-    /*if (config.serverConfig.deploy === "heroku") {
+    if (config.serverConfig.deploy === "heroku") {
         fullEndpoint = `http://${silo.host}${silo.endpoint}`;
     }
-    else {*/
+    else {
         fullEndpoint = `http://${silo.host}:${silo.port}${silo.endpoint}`;
-    //}
+    }
 
     return fullEndpoint;
 }
